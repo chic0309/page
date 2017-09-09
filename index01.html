@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+    <script>
+        window.onload=function () {
+            new Vue({
+                el:".x",
+                data:{
+                    msg:"wdasdasd",
+                    arr:["a","b","c"],
+                    json:{a:"a",b:"b",c:"c"},
+                    a:true,
+                },
+                methods:{
+                    show:function () {
+                        this.a?this.a=false:this.a=true;
+                    }
+                }
+            })
+        }
+    </script>
+</head>
+<body id="body">
+<div class="x">
+    <button v-on:click="show()">sss</button>
+    <div  style="background-color: red;width: 100px;height: 100px"  v-show="a" id="box"></div>
+</div>
+
+</body>
+</html>
